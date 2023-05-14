@@ -1,6 +1,8 @@
 //DATA STRUCTURES - ARRAYS
+//There are two types: Static and Dynamic Arrays
+//Static: Set the size of the array ahead of time
+//Dynamic: If needed will copy the array and doble the space in other location
 
-//Declare an Array of letters
 //4 x 4 = 16 bytes of storage (4 bytes per item times 4 items)
 const strings = ['a','b','c','d'];
 //Indexes         0   1   2   3
