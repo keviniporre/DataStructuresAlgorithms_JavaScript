@@ -2,7 +2,27 @@
 //"Hi my name is Kevin" should ne:
 //"niveK si eman ym iH"
 
-function reverse(str) {
+//Own Solution
+function reverse(word) {
+
+    const wordBackwards = [];
+    const totalLetters = word.length;
+    const maxIndex = totalLetters - 1;
+
+    console.log( word + " has " + totalLetters + " letters");
+
+    for (let i = maxIndex; i >= 0; i--) {
+        wordBackwards.push(word[i]); 
+    }
+    console.log(wordBackwards);
+    return wordBackwards.join("");
+}
+
+console.log(reverse("Kevin"));
+console.log("END OF SOLUTION ================");
+
+//Course Solution
+function reverse1(str) {
     if (checkInput(str)) {
         const backwards = [];
         const totalItems = str.length - 1;
@@ -21,7 +41,7 @@ function checkInput(str) {
     }
     else {return true; }
 }
-console.log(reverse("Hi my name is Cimar"));
+console.log(reverse1("Hi my name is Cimar"));
 
 //Reverse String Ver 2
 function reverse2(str) {
