@@ -13,7 +13,32 @@ function mergeSortedArrays(array1, array2)
     {
         mergedArray.push(array2[i]);
     }
-    return mergedArray;
+    return mergedArray.sort();
 }
 
-console.log(mergeSortedArrays([0,3,4,31,40],[4,6,30,43]));
+//console.log(mergeSortedArrays([0,3,4,31,40],[4,6,30,43]));
+
+//Course Answer
+function mergeSortArray(array1, array2) 
+{
+    //Const cant modify from array to number while let can
+    const mergedArray = [];
+    let array1Item = array1[0];
+    let array2Item = array2[0];
+    let i = 1;
+    let j = 1;
+
+    while (array1Item || array2Item) {
+        if (array1Item < array2Item) {
+            mergedArray.push(array1Item);
+            array1Item = array1[i];
+            i++;
+        } else {
+            mergedArray.push(array2Item);
+            array2Item = array2[j];
+            j++;
+        }
+    }
+    return mergedArray;
+}
+console.log(mergeSortArray([0,3,4,31,40],[4,6,30,43]));
